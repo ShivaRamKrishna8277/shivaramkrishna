@@ -10,6 +10,23 @@
 ::-webkit-scrollbar {
     display: none;
 }
+.circle{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    position: fixed;
+}
+.light-circle{
+    background-color: rgba(255, 255, 255, .2) !important;
+}
+.dark-circle{
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
 
 /* font */
 @font-face {
@@ -200,4 +217,13 @@ html {
     #skillsMarqueeWrapper{
         animation: moveLeft 4s linear infinite;
     }
+}
+
+.cursor{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    background-color: rgb(255, 255, 255);
 }
