@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* font */
+@font-face {
+    font-family: 'monts-alt';
+    src: url('assets/webfonts/MontserratAlt1-SemiBold.woff2') format('woff2'), /* Modern Browsers */
+         url('assets/webfonts/MontserratAlt1-SemiBold.woff') format('woff');   /* Older Browsers */
+}
+
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+.row{
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    height: 100vh;
+    width: 100% !important;
+}
+.row:nth-of-type(odd){
+    background: #1a1b1f !important;
+}
+
+
+/* section_1 */
+#section_1{
+    background-image: url(assets/images/landing_bg.svg) !important;
+    background-position: left !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    color: white;
+}
+
+#logo{
+    font-family: 'monts-alt';
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+#about_me{
+    text-decoration: none;
+    color: white;
+    font-family: 'MuseoModerno';
+    opacity: .5;
+}
+#about_me:hover{
+    opacity: 1;
+}
+
+#heroTitle{
+    font-size: 5.5rem;
+    font-weight: 700;
+}
+#heroSubTitle{
+    font-size: 1.1rem;
+    opacity: .5;
+}
+@media(max-width:752px){
+    #logo{
+        font-size: 1.2rem;
+    }
+    #about_me{
+        font-size: 0.8rem;
+    }
+    #heroTitle{
+        font-size: 3.5rem;
+    }
+    #heroSubTitle{
+        font-size: 1rem;
+    }
+}
+@media(max-width:455px){
+    #logo{
+        font-size: 1.1rem;
+    }
+    #about_me{
+        font-size: 0.7rem;
+    }
+    #heroTitle{
+        font-size: 2.5rem;
+    }
+    #heroSubTitle{
+        font-size: .8rem;
+    }
+}
+
+/* projectSection */
+.projectSection{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100vh !important;
+    font-family: 'Montserrat' !important;
+    background-repeat: no-repeat !important;
+    background-position: right !important;
+    background-size: contain !important;
+}
+.projImgCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section_3{
+    color: white !important;
+}
+.projNum{
+    font-weight: 300;
+}
+.projTitle{
+    font-weight: 700;
+}
+.projDesc{
+    font-weight: 500;
+}
+.projLink{
+    text-decoration: none;
+}
+.projImg{
+    height: 80vh !important;
+    width: 100% !important;
+    object-fit: contain;
+}
+@media(max-width:992px){
+    .projectSection{
+        text-align: center;
+    }
+}
+
+/* about me */
+#section_5{
+    display: grid;
+    place-content: center;
+    text-align: center;
+    color: white;
+}
+#section_5 p{
+    font-family: 'montserrat';
+    line-height: 30px;
+    font-weight: 400;
+}
+.exp{
+    color: #ffffff74 !important;
+}
+
+#skillsMarquee{
+    width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#skillsMarquee img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+.vLine{
+    background: #333438;
+    height: 50px;
+    width: 0;
+    padding: .05px;
+}
+#skillsMarqueeWrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    animation: moveLeft 10s linear infinite;
+    animation-delay: 1s;
+    gap: 25px;
+}
+@keyframes moveLeft{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-60%);
+    }
+}
+
