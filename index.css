@@ -187,4 +187,17 @@ html {
         transform: translateX(-60%);
     }
 }
-
+.resumeBtn{
+    background: white;
+    border: none;
+    outline: line;
+    padding: 5px 20px;
+    margin: 0 auto;
+    border-radius: 5px;
+    width: fit-content;
+}
+@media(max-width:1000px){
+    #skillsMarqueeWrapper{
+        animation: moveLeft 4s linear infinite;
+    }
+}
