@@ -5,6 +5,9 @@
     list-style: none;
     text-decoration: none;
 }
+body{
+    body: none !important;
+}
 
 /* width */
 ::-webkit-scrollbar {
